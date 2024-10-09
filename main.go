@@ -1,11 +1,8 @@
 package main
 
 import (
-	"Bangseungjae/insurance/danger"
-	_ "Bangseungjae/insurance/danger"
+	"Bangseungjae/insurance/entity"
 	"Bangseungjae/insurance/store"
-	"Bangseungjae/insurance/user"
-	_ "Bangseungjae/insurance/user"
 	"Bangseungjae/insurance/util"
 	"context"
 	"fmt"
@@ -80,9 +77,9 @@ func run(ctx context.Context) error {
 }
 
 func setting() {
-	Users := user.Users
+	Users := entity.Users
 	for _, u := range Users {
-		for _, d := range danger.Dangers {
+		for _, d := range entity.Dangers {
 			if d.ToAge >= u.Age && d.FromAge <= u.Age && d.Gender == u.Gender {
 				fmt.Printf("user name: %s\n", u.Name)
 				var userInsurance store.UserInsurance

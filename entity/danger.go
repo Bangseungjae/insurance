@@ -1,4 +1,4 @@
-package danger
+package entity
 
 import (
 	"Bangseungjae/insurance/util"
@@ -26,11 +26,11 @@ var (
 func init() {
 	log.Println("danger init")
 	filename := "./config/danger_ratio.csv"
-	readDangerCSV(filename)
+	readToDangers(filename)
 	fmt.Println(Dangers)
 }
 
-func readDangerCSV(filename string) {
+func readToDangers(filename string) {
 	file, err := os.Open(filename)
 	util.Check(err)
 	read := csv.NewReader(file)
