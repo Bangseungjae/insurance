@@ -1,0 +1,14 @@
+products:
+  - name: "종합보험"
+    covers:
+      - name: "상해사망"
+        base_premium: 1000
+      - name: "질병사망"
+        base_premium: 800
+      - name: "암진단"
+        base_premium: 500
+
+cover_rates:
+  sanghe: 1.0 # 상해사망
+  jilbung: 1.2 # 질병사망
+  am: 1.5 # 암진단

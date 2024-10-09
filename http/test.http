@@ -1,0 +1,2 @@
+### GET request with parameter
+GET localhost:8080/insurance?id=1
